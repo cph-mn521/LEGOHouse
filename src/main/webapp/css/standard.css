@@ -1,0 +1,140 @@
+body { 
+    background-color: grey; 
+}
+
+input[type=text] {
+    width: 130px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid brown;
+    border-radius: 4px;
+    background-color: #3CBC8D;
+    color: white;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 20%;
+}
+
+input[type=password] {
+    width: 130px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid brown;
+    border-radius: 4px;
+    background-color: #3CBC8D;
+    color: white;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=password]:focus {
+    width: 20%;
+}
+
+input[type=email] {
+    width: 130px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid brown;
+    border-radius: 4px;
+    background-color: #3CBC8D;
+    color: white;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=email]:focus {
+    width: 27%;
+}
+
+fieldset{
+    text-align: center;
+    width: 35%;
+    border: 2px solid brown;
+    border-radius: 4px;
+    color: #ffcccc;
+}
+
+legend{
+    text-align: left;
+    color: #ffcccc;
+}
+
+.divs {
+    padding: 12px 20px;
+    color: #ffcccc;
+    width: 30%;
+    border: 2px solid brown;
+    border-radius: 4px;
+}
+
+.buttonGreen {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttonGreen:hover {
+    background-color: darkgreen
+}
+
+.buttonBlue {
+    background-color: black;
+    border: 1px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttonBlue:hover {
+    background-color: darkgreen;
+}
+
+.whiteborder {
+    color: #ffffff; 
+    border: 3px solid #ffffff; 
+    padding: 10px; 
+    margin: 10px;
+}
+
+#myCanvas{
+    text-align: center;
+    background-color:whitesmoke;
+    border:1px solid #d3d3d3;
+}
+
+#menu_box{
+    text-align: center;
+    background-color:black;
+    color:white;
+    padding:20px;
+}
+
+cart_tabel{
+    text-align: center;
+    width: 50%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%
+}
+th {
+  height: 50px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}

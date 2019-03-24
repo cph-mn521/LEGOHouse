@@ -1,0 +1,86 @@
+
+<%@page import="com.LEGO.logic.Cart"%>
+<%@page import="com.LEGO.DTO.User"%>
+
+
+<center>
+    <a id="a_logo" href="index.jsp">
+        <canvas id="myCanvas" width= "245" height="70">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "40px arial";
+            
+            ctx.strokeText("LEGO!", 60, 50);
+            
+        </script>
+    </a>
+
+
+    <%
+    boolean loggedIn = false;
+    User user = null;
+    if(session.getAttribute("user")!=null){
+    user = (User) session.getAttribute("user");
+    loggedIn = true;
+    }
+%>
+
+</center>
+
+<div id="menu_box">
+
+    <!--Menu buttons and login name-->
+<div>
+<% if (loggedIn)
+        {
+    %>
+   
+          <!--Login name (login and user object comes from header.jspf) placed somewhere on screen-->
+          
+              
+    <h2 style="color: whitesmoke"> <%=user.getName()%>
+<%     }  %>
+</div>
+        
+    <% if (loggedIn)
+        {
+    %>
+    <button class="buttonGreen" onclick="window.location.href = 'control?origin=logout'">Logout</button>
+    <button class="buttonBlue" onclick="window.location.href = 'control?origin=cart'">Cart: <%=session.getAttribute("ItemsInCart")%></button>
+    <%
+    } else
+    {
+    %>
+    <button class="buttonGreen" onclick="window.location.href = 'control?origin=login1'">Login</button>
+    <%
+        }
+        
+        if(!loggedIn){
+    %>
+    
+    <button class="buttonBlue" onclick="window.location.href = 'control?origin=registration1'">Registrer</button>
+    <%}%>
+    <button class="buttonGreen" onclick="window.location.href = 'control?origin=shop'">Shop</button>
+
+    
+
+    <% if (loggedIn && (boolean)session.getAttribute("admin"))
+        {
+    %>
+    <button class="buttonGreen" onclick="window.location.href = 'control?origin=admin'">Admin</button>
+    <%
+        }
+    %>
+    <%
+        if(loggedIn){
+    %>
+    <button class="buttonBlue" onclick="window.location.href = 'control?origin=account'">Account</button>
+    <%}%>
+     
+
+</div>
+
+<br><br>
